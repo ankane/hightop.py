@@ -14,3 +14,8 @@ jobs:
       with:
         database: hightop_python_test
     - run: ADAPTER=postgresql pytest
+
+    - uses: ankane/setup-mysql@v1
+      with:
+        database: hightop_python_test
+    - run: ADAPTER=mysql pytest

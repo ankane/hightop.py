@@ -13,6 +13,11 @@ if os.environ.get('ADAPTER') == 'postgresql':
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hightop_python_test'
     }
+elif os.environ.get('ADAPTER') == 'mysql':
+    database = {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hightop_python_test'
+    }
 else:
     database = {
         'ENGINE': 'django.db.backends.sqlite3',
