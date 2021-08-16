@@ -2,8 +2,10 @@ from django.db.models import Count, QuerySet
 from django.db.models.expressions import Func
 from typing import Any, Dict, Optional
 
+__all__ = ['HightopMixin', 'HightopQuerySet']
 
-class HightopQuerySet(QuerySet):
+
+class HightopMixin:
     def top(self, column: Any, limit: Optional[int] = None, null: bool = False, min: Optional[int] = None, distinct: Any = None) -> Dict[Any, int]:
         columns = list(column) if isinstance(column, list) or isinstance(column, tuple) else [column]
         if len(columns) == 0:
@@ -34,3 +36,7 @@ class HightopQuerySet(QuerySet):
             return {row[columns[0]]: row['count'] for row in result}
         else:
             return {tuple([row[column] for column in columns]): row['count'] for row in result}
+
+
+class HightopQuerySet(QuerySet, HightopMixin):
+    pass
