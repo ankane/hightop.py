@@ -29,7 +29,7 @@ Add a [custom manager](https://docs.djangoproject.com/en/3.2/topics/db/managers/
 from hightop import HightopQuerySet
 
 class Visit(models.Model):
-    objects = models.Manager.from_queryset(HightopQuerySet)()
+    objects = HightopQuerySet.as_manager()
 ```
 
 And query away

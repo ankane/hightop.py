@@ -41,7 +41,7 @@ class Visit(models.Model):
     city = models.TextField()
     user_id = models.TextField()
 
-    objects = models.Manager.from_queryset(HightopQuerySet)()
+    objects = HightopQuerySet.as_manager()
 
     class Meta:
         app_label = 'myapp'
