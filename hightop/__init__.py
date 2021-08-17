@@ -7,7 +7,7 @@ __all__ = ['HightopMixin', 'HightopQuerySet']
 
 class HightopMixin:
     def top(self, column: Any, limit: Optional[int] = None, null: bool = False, min: Optional[int] = None, distinct: Any = None) -> Dict[Any, int]:
-        columns = list(column) if isinstance(column, list) or isinstance(column, tuple) else [column]
+        columns = list(column) if isinstance(column, (list, tuple)) else [column]
         if len(columns) == 0:
             raise ValueError('No columns')
 
