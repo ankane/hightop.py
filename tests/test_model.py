@@ -81,7 +81,7 @@ def create_city(city, count=1):
         Visit(city=city).save()
 
 
-class TestModel(object):
+class TestModel:
     def setup_method(self, test_method):
         Visit.objects.all().delete()
 
