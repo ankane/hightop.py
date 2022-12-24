@@ -4,18 +4,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-    - run: pip install -r requirements.txt
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - run: pip install -r requirements.txt
 
-    - run: pytest
+      - run: pytest
 
-    - uses: ankane/setup-postgres@v1
-      with:
-        database: hightop_python_test
-    - run: ADAPTER=postgresql pytest
+      - uses: ankane/setup-postgres@v1
+        with:
+          database: hightop_python_test
+      - run: ADAPTER=postgresql pytest
 
-    - uses: ankane/setup-mysql@v1
-      with:
-        database: hightop_python_test
-    - run: ADAPTER=mysql pytest
+      - uses: ankane/setup-mysql@v1
+        with:
+          database: hightop_python_test
+      - run: ADAPTER=mysql pytest
