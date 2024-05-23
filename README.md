@@ -11,7 +11,7 @@ Visit.objects.top('browser')
 # }
 ```
 
-[![Build Status](https://github.com/ankane/hightop.py/workflows/build/badge.svg?branch=master)](https://github.com/ankane/hightop.py/actions)
+[![Build Status](https://github.com/ankane/hightop.py/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/hightop.py/actions)
 
 ## Installation
 
