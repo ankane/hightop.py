@@ -23,6 +23,6 @@ Homepage = "https://github.com/ankane/hightop.py"
 dev = [
     "Django",
     "mysqlclient",
-    "psycopg2",
+    "psycopg[binary]",
     "pytest"
 ]
