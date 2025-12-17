@@ -1,4 +1,0 @@
-Django
-mysqlclient
-psycopg2
-pytest

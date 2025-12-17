@@ -94,6 +94,6 @@ To get started with development:
 ```sh
 git clone https://github.com/ankane/hightop.py.git
 cd hightop.py
-pip install -r requirements.txt
+pip install --group dev
 pytest
 ```

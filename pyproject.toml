@@ -18,3 +18,11 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/ankane/hightop.py"
+
+[dependency-groups]
+dev = [
+    "Django",
+    "mysqlclient",
+    "psycopg2",
+    "pytest"
+]
